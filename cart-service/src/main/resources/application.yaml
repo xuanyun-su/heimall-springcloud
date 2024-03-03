@@ -1,0 +1,24 @@
+# keytool -genkeypair -alias hmall -keyalg RSA -keypass hmall123 -keystore hmall.jks -storepass hmall123
+feign:
+  okhttp:
+    enabled: true
+  sentinel:
+    enabled: true # 开启fegin对sentinel的整合
+# 开启连接池
+spring:
+  cloud:
+    sentinel:
+      transport:
+        port: 8090
+        dashboard: localhost:8090
+      http-method-specify: true
+      datasource:
+        ds2: # 配置文件数据源名称 随便起
+          nacos:
+            server-addr: ${hm.nacos.addr}
+            data-id: datagrade.json
+            group-id: DEFAULT_GROUP
+            data-type: json
+            rule-type: degrade
+            # degrade 降级
+

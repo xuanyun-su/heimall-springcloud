@@ -1,0 +1,15 @@
+1.md
+.vscode
+hm-service/**
+logs
+*.png
+**/target
+**/1.txt
+**/bootstrap.yml
+**/application-local.yaml
+**/application-dev.yaml
+**/applictaion.yaml
+**/bootstrap.yaml
+**/application-local.yml
+**/application-dev.yml
+**/applictaion.yml
